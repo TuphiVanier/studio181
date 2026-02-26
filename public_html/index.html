@@ -1,11 +1,102 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>studio 181</title>
-</head>
-<body>
-    <h1>studio 181 l0l</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Studio 181</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <article id="menuToggle">
+        <input type="checkbox" id="menuCheckbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+
+        <ul id="menu">
+          <li>
+            <a href="#">
+              <label for="menuCheckbox" onclick="this.parentNode.click()"
+                >Works</label
+              >
+            </a>
+          </li>
+          <li>
+            <a href="#about">
+              <label for="menuCheckbox" onclick="this.parentNode.click()"
+                >About</label
+              >
+            </a>
+          </li>
+
+          <!-- These just close the menu -->
+          <li>
+            <a href="#contact">
+              <label for="menuCheckbox">Contact</label>
+            </a>
+          </li>
+        </ul>
+      </article>
+    </nav>
+    <main>
+      <section id="title"><h1>Studio 181</h1></section>
+      <section id="work1">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/cFYA7iYRrdI?autoplay=1&mute=1&controls=0"
+          title="YouTube video player"
+          frameborder="0"
+          allow="
+            accelerometer;
+            autoplay;
+            clipboard-write;
+            encrypted-media;
+            gyroscope;
+            picture-in-picture;
+            web-share;
+          "
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+        <article>
+          <h2>Work Title</h2>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Praesentium,iusto.
+          </p>
+        </article>
+      </section>
+      <section id="about">
+        <h2>About</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
+          pariatur minima nisi praesentium ab, architecto quod dolorum vel
+          temporibus!
+        </p>
+      </section>
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
+          pariatur minima nisi praesentium ab, architecto quod dolorum vel
+          temporibus!
+        </p>
+        <a href="https://github.com/TuphiVanier/studio181">Github</a>
+        <a
+          href="https://www.figma.com/design/EBcyASwGW9oTObhCXKQHNM/Studio-181?node-id=0-1&t=G8TaF2RQR2nI2QnM-1"
+          >Figma</a
+        >
+      </section>
+    </main>
+  </body>
 </html>
