@@ -49,7 +49,7 @@
     height: 4px;
     margin-bottom: 5px;
     position: relative;
-    background: var(--secondary-color);
+    background: var(--primary-color);
     z-index: 3;
     transform-origin: 4px 0px;
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
@@ -68,7 +68,7 @@
 #menuToggle input:checked~span {
     opacity: 1;
     transform: rotate(45deg) translate(-2px, -1px);
-    background: var(--secondary-color);
+    background: var(--primary-color);
 }
 
 #menuToggle input:checked~span:nth-last-child(3) {
@@ -121,10 +121,15 @@ body{
     font-style: normal;
 }
 
+html{
+    scroll-snap-type: y mandatory;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
 main{
     width: calc(100% - 240px);
     margin: 100px auto;
-    scroll-snap-type: both mandatory;
 }
 
 h1{
@@ -132,36 +137,116 @@ h1{
     font-style: italic;
 }
 
-section{
+main > section{
     scroll-snap-align: start;
+    scroll-snap-stop: always;
+    height: 100%;
 }
 
 a{
-    color: #00FE00;
+    color: var(--primary-color);
 }
 
 a:hover{
-    color: #017d01;
+    color: var(--secondary-color);
 }
 
-#title{
+header{
+    width: 5vw;
+    height: auto;
+    left: 20px;
+    margin-top: 20px;
+    position: absolute;
+    z-index: 2;
+}
+
+#title, #contact{
     height: 100vh;
 }
 
-#work1{
-    height: 100vh;
-}
-
-iframe{
-    width: 100%;
+#titlescreen{
+    width: 100vw;
     max-height: 100vh;
     height: 100%;
+    margin: -100px 0 0 -120px;
     position: absolute;
-    left: 0;
+}
+
+#about{
+    height: 100vh;
+    padding: 50px 0;
+    display: grid;
+    place-items: center;
+}
+
+#about h2{
+    font-size: 4rem;
+}
+
+.gradient{
+    animation: background-pan 5s linear infinite;
+    background: linear-gradient(to right,
+                var(--primary-color),
+                var(--secondary-color),
+                var(--text-color),
+                var(--primary-color));
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+}
+
+@keyframes background-pan {
+    from {
+        background-position: 0% center;
+    }
+
+    to {
+        background-position: -200% center;
+    }
+}
+
+.sectionpin {
+    height: 700vh;
+    overflow: visible;
+
+    view-timeline-name: --section-pin-tl;
+    view-timeline-axis: block;
+}
+
+iframe {
+    height: 100vh;
+    width: 100vw;
+    margin-left: -120px;
+    position: sticky;
+    top: 0;
+    overflow-x: hidden;
     z-index: -1;
 }
 
-h2{
+main article {
     z-index: 2;
     position: relative;
+    height: 100vh;
+    width: 250vmax;
+    /* Hook animation */
+    will-change: transform;
+    animation: linear moving forwards;
+
+    /* Link animation to view-timeline */
+    animation-timeline: --section-pin-tl;
+    animation-range: contain 0% contain 100%;
+}
+
+main article p{
+    width: 100%;
+    text-align: left;
+    font-size: 2rem;
+}
+
+@keyframes moving {
+    to {
+        transform: translateY(calc(-100% + 100vh));
+    }
 }
