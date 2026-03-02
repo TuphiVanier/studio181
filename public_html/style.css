@@ -119,6 +119,7 @@ body{
     font-family: "Space Mono", monospace;
     font-weight: 400;
     font-style: normal;
+    font-size: 1.2rem;
 }
 
 html{
@@ -143,12 +144,28 @@ main > section{
     height: 100%;
 }
 
+p{
+    padding-bottom: 10px;
+}
+
 a{
     color: var(--primary-color);
 }
 
 a:hover{
     color: var(--secondary-color);
+}
+
+.gradient {
+    animation: background-pan 5s linear infinite;
+    background: linear-gradient(to right,
+            var(--primary-color),
+            var(--secondary-color),
+            var(--text-color),
+            var(--primary-color));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 header{
@@ -160,7 +177,7 @@ header{
     z-index: 2;
 }
 
-#title, #contact{
+#title{
     height: 100vh;
 }
 
@@ -172,29 +189,46 @@ header{
     position: absolute;
 }
 
-#about{
+#about, #contact{
     height: 100vh;
     padding: 50px 0;
     display: grid;
     place-items: center;
 }
 
-#about h2{
+#about h2, #contact h2{
     font-size: 4rem;
 }
 
-.gradient{
-    animation: background-pan 5s linear infinite;
-    background: linear-gradient(to right,
-                var(--primary-color),
-                var(--secondary-color),
-                var(--text-color),
-                var(--primary-color));
-    background-size: 200%;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    white-space: nowrap;
+#floating-tri{
+    z-index: -1;
+    position: absolute;
+    transform-origin: 50% 70%;
+    height: 100vh;
+    width: 100vw;
+    top: 100vh;
+}
+
+#floating-tri svg:nth-child(1) {
+    scale: 5.5;
+    transform: rotate(37deg);
+    animation: rotate 20s infinite normal linear;
+}
+
+#floating-tri svg:nth-child(2) {
+    scale: 3.5;
+    transform: rotate(-143deg);
+    animation: rotate 30s infinite reverse linear;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(-180deg);
+    }
+
+    100% {
+        transform: rotate(180deg);
+    }
 }
 
 @keyframes background-pan {
@@ -222,15 +256,14 @@ iframe {
     position: sticky;
     top: 0;
     overflow-x: hidden;
-    z-index: -1;
+    z-index: 1;
 }
 
 main article {
     z-index: 2;
     position: relative;
     height: 100vh;
-    width: 250vmax;
-    /* Hook animation */
+    width: 100%;
     will-change: transform;
     animation: linear moving forwards;
 
