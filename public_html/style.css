@@ -145,7 +145,7 @@ main > section{
 }
 
 p{
-    padding-bottom: 10px;
+    padding-top: 20px;
 }
 
 a{
@@ -153,24 +153,50 @@ a{
 }
 
 a:hover{
-    background: linear-gradient(to right,
-                var(--primary-color),
-                var(--secondary-color),
-                var(--primary-color));
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+    color: var(--secondary-color);
 }
 
 .gradient {
+    animation: background-pan 5s linear infinite;
     background: linear-gradient(to right,
             var(--primary-color),
             var(--secondary-color),
+            var(--primary-color),
             var(--text-color),
             var(--primary-color));
+    background-size: 200%;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+:root {
+    --red: #B43212;
+    --orange: #DC8F0A;
+    --yellow: #facd38;
+}
+
+.gradient-red {
+    animation: background-pan 5s linear infinite;
+    background: linear-gradient(to right,
+            var(--red),
+            var(--orange),
+            var(--yellow),
+            var(--red));
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes background-pan {
+    from {
+        background-position: 0% center;
+    }
+
+    to {
+        background-position: -200% center;
+    }
 }
 
 header{
@@ -195,7 +221,7 @@ max-width: 100px;
     position: absolute;
 }
 
-#about, #contact{
+#about, #contact, #members{
     height: 100vh;
     padding: 50px 0;
     display: grid;
@@ -204,6 +230,18 @@ max-width: 100px;
 
 h2{
     font-size: 4rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+#members article{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    width: 100%;
+    height: auto;
 }
 
 .sectionpin {
