@@ -4,28 +4,36 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AERA Invite Form</title>
+
+  <link rel="stylesheet" href="style.css">
 </head>
   
 <body>
+  <div id="background"><iframe src="https://player.vimeo.com/video/1169974151?badge=0&amp;controls=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;muted=1&amp;loop=1" width="400" height="300" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="Invitation_background"></iframe></div>
   <div class="container">
-
+      <h1>You're Invited!</h1>
     <div class="card">
-      <h2>You're Invited</h2>
-      <h3>
-   The avant-garde visionary known as <b>AERA</b> cordially invites you to an exclusive unveiling of her newest collection in <b>Montréal, Québec</b> on <b>July 1st, 2026</b>, from <b>8:00PM to 10:30PM</b>.
-<h3>The location will be disclosed <b>24 hours</b> prior to the event.</h3>
+      <h2>AERA the avant garde visionary partnered with 181 to cordially invite you to an exclusive unveiling of their newest collection.</h2>
 
-<h3>This season’s collection explores the tension between <b>climate consciousness</b> and <b>digital futures</b> — a bold dialogue between nature and technology, fragility and innovation.</h3>
+      <section class="list">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" fill="#B43212"><path d="M224 64C206.3 64 192 78.3 192 96L192 128L160 128C124.7 128 96 156.7 96 192L96 240L544 240L544 192C544 156.7 515.3 128 480 128L448 128L448 96C448 78.3 433.7 64 416 64C398.3 64 384 78.3 384 96L384 128L256 128L256 96C256 78.3 241.7 64 224 64zM96 288L96 480C96 515.3 124.7 544 160 544L480 544C515.3 544 544 515.3 544 480L544 288L96 288z"/></svg>
+          <h3>July 1st, 2026</h3>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" fill="#B43212"><path d="M320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576C178.6 576 64 461.4 64 320C64 178.6 178.6 64 320 64zM296 184L296 320C296 328 300 335.5 306.7 340L402.7 404C413.7 411.4 428.6 408.4 436 397.3C443.4 386.2 440.4 371.4 429.3 364L344 307.2L344 184C344 170.7 333.3 160 320 160C306.7 160 296 170.7 296 184z"/></svg>
+          <h3>8:00PM to 10:30PM</h3>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" fill="#B43212"><path d="M298.2 72.6C310.5 61.2 329.5 61.2 341.7 72.6L432 156.3L432 144C432 126.3 446.3 112 464 112L496 112C513.7 112 528 126.3 528 144L528 245.5L565.8 280.6C575.4 289.6 578.6 303.5 573.8 315.7C569 327.9 557.2 336 544 336L528 336L528 512C528 547.3 499.3 576 464 576L176 576C140.7 576 112 547.3 112 512L112 336L96 336C82.8 336 71 327.9 66.2 315.7C61.4 303.5 64.6 289.5 74.2 280.6L298.2 72.6zM304 384C277.5 384 256 405.5 256 432L256 528L384 528L384 432C384 405.5 362.5 384 336 384L304 384z"/></svg>
+          <h3>Will be disclosed 24 hours prior to the event</h3>
+      </section>
 
-<h3>An intimate gathering of no more than <b>888 distinguished guests</b> personally invited by AERA will experience:</h3>
+      <h2>The collection featured in this event explores the tension between climate consciousness and digital futures with a bold dialogue between nature and technology, fragility and innovation.</h2>
 
-<h3>• A refined <b>7:00PM–8:00PM cocktail reception</b></h3>
+<h3>An intimate gathering of no more than 888 distinguished guests personally invited by AERA will experience:</h3>
+
+<h3>• A refined 7:00PM-8:00PM cocktail reception</h3>
 <h3>• A curated runway presentation</h3>
-<h3>• An exclusive <b>10:30PM–11:30PM open bar</b> accompanied by light instrumental ambience</h3>
+<h3>• An exclusive 10:30PM-11:30PM open bar accompanied by light instrumental ambience</h3>
 
 <h3>An evening of design, discourse, and deliberate elegance awaits.</h3>
-      </h3>
-      <p class="small">Please complete the form below to confirm your attendance.</p>
+<p>Please complete the form below to confirm your attendance.</p>
     </div>
 
     <div class="card">
@@ -66,8 +74,8 @@
         <label for="attendance">Attendance</label>
         <select id="attendance" name="attendance" required>
           <option value="" disabled selected>Select one</option>
-          <option value="R1">Runway (8pm–10h30pm) + Cocktail Hour (7pm–8pm)</option>
-          <option value="R2">Runway (8pm–10h30pm) + Open Bar (10h30pm–11h30pm)</option>
+          <option value="R1">Runway (8pm-10h30pm) + Cocktail Hour (7pm-8pm)</option>
+          <option value="R2">Runway (8pm-10h30pm) + Open Bar (10h30pm-11h30pm)</option>
           <option value="All">All (Cocktail Hour + Runway + Open Bar)</option>
         </select>
 
@@ -86,7 +94,7 @@
             <label for="lastName">Last Name</label>
             <input id="lastName" type="text" name="last_name" required />
           </div>
-        </div>
+    </div>
 
         <label for="email">Email</label>
         <input id="email" type="email" name="email" required />
@@ -106,8 +114,8 @@
    <label for="attendance">Attendance</label>
         <select id="attendance" name="attendance" required>
           <option value="" disabled selected>Select one</option>
-          <option value="R1">Runway (8pm–10h30pm) + Cocktail Hour (7pm–8pm)</option>
-          <option value="R2">Runway (8pm–10h30pm) + Open Bar (10h30pm–11h30pm)</option>
+          <option value="R1">Runway (8pm-10h30pm) + Cocktail Hour (7pm-8pm)</option>
+          <option value="R2">Runway (8pm-10h30pm) + Open Bar (10h30pm-11h30pm)</option>
           <option value="All">All (Cocktail Hour + Runway + Open Bar)</option>
         </select>
 
@@ -122,84 +130,5 @@
         <button type="submit">Submit RSVP</button>
       </form>
     </div>
-
-  </div>
 </body>
-
-<style>
-    body {
-      background: black;
-      color: white;
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      padding-top: 50px;
-      margin: 0;
-    }
-
-    .container { width: 520px; max-width: 92vw; }
-
-    .card {
-      border: 1px solid #333;
-      border-radius: 12px;
-      padding: 18px;
-      background: #0f0f0f;
-      margin-bottom: 18px;
-    }
-
-    h2 { text-align: center; margin: 0 0 10px; 
-    color: red;}
-    h3 { font-weight: 400; line-height: 1.45; margin: 0; font-size: 14px; color: #e8e8e8; }
-
-    label { display: block; margin-top: 12px; font-size: 14px; }
-
-    input, select, button, textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 6px;
-      box-sizing: border-box;
-      border-radius: 8px;
-      border: 1px solid #333;
-      background: #141414;
-      color: white;
-      font-size: 14px;
-    }
-
-    button {
-      cursor: pointer;
-      background: white;
-      color: black;
-      font-weight: bold;
-      border: none;
-      margin-top: 16px;
-    }
-
-    button:hover { opacity: 0.85; }
-
-    .row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-    @media (max-width: 520px) { .row { grid-template-columns: 1fr; } }
-
-    .checkline {
-      display: flex;
-      gap: 10px;
-      margin-top: 12px;
-      align-items: flex-start;
-      font-size: 13px;
-      color: #e8e8e8;
-    }
-    .checkline input { width: auto; margin-top: 3px; }
-
-    .small {
-      font-size: 12px;
-      color: #bdbdbd;
-      margin-top: 6px;
-    }
-
-    /* Locked section look */
-    .locked {
-      opacity: 0.5;
-      filter: grayscale(1);
-      pointer-events: none;
-    }
-  </style>
 </html>
