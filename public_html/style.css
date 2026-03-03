@@ -152,8 +152,16 @@ a{
     color: var(--primary-color);
 }
 
-a:hover{
+a:hover {
     color: var(--secondary-color);
+}
+
+.hover-red{
+    color: var(--red);
+}
+
+.hover-red:hover {
+    color: var(--orange);
 }
 
 .gradient {
