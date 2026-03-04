@@ -1,7 +1,7 @@
 body {
-    background: black;
-    color: white;
-    font-family: Arial, sans-serif;
+    color: var(--white);
+    font-family: "Space Mono", monospace;
+        font-weight: 400;
     display: flex;
     justify-content: center;
     padding-top: 50px;
@@ -77,20 +77,25 @@ h1 {
 
 h2{
     color: var(--orange);
+    font-size: 1.2rem;
+}
+
+.regular{
+    font-size: 1rem;
 }
 
 h3 {
     font-weight: 400;
     line-height: 1.45;
     margin: 0;
-    font-size: 14px;
+    font-size: 1rem;
     color: var(--white);
 }
 
 label {
     display: block;
     margin-top: 12px;
-    font-size: 14px;
+    font-size: 1rem;
 }
 
 input,
@@ -105,7 +110,7 @@ textarea {
     border: 1px solid #333;
     background: #141414;
     color: var(--white);
-    font-size: 14px;
+    font-size: 1rem;
 }
 
 button {

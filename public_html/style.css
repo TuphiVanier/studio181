@@ -148,11 +148,11 @@ p{
     padding-top: 20px;
 }
 
-a{
+main a{
     color: var(--primary-color);
 }
 
-a:hover {
+main a:hover {
     color: var(--secondary-color);
 }
 
@@ -349,6 +349,24 @@ main article p{
     100% {
         transform: rotate(180deg);
     }
+}
+
+footer{
+    position: fixed;
+    background-color: #1d1d1d;
+    height: 7vh;
+    width: 100vw;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    place-items: center;
+}
+
+footer svg{
+    width: 30px;
+    height: 30px;
 }
 
 
